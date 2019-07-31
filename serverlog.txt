@@ -1,0 +1,329 @@
+
+This James Valles' server log for MyWebServer.
+
+
+----------
+** << 0. Started server 
+
+James Valles' Web Server is listening at port 2540.
+
+*** << 1. I started at the root directory, opened dog.txt file, then opened cat.html file.
+
+*This is a directory. Loading directory page: ./*
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 387
+Content-Type: text/html
+Response for Request: /
+Output: <html><body><pre><h1>Index of ./</h1><br>[TXT] <a href="/.DS_Store">.DS_Store</a> <br>[DIR] <a href="/out">out</a> <br>[DIR] <a href="/sub-a">sub-a</a> <br>[TXT] <a href="/dog.txt">dog.txt</a> <br>[TXT] <a href="/cat.html">cat.html</a> <br>[TXT] <a href="/MyWebServer.iml">MyWebServer.iml</a> <br>[DIR] <a href="/.idea">.idea</a> <br>[DIR] <a href="/src">src</a> <br></pre></body></html>
+
+*** Processed for this Request ***
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/txt
+Response for Request: /dog.txt
+Output: This is Elliott's dog file on condor. Good job!
+
+
+*** Processed for this Request ***
+GET /dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 121
+Content-Type: text/html
+Response for Request: /cat.html
+Output: <html> <body>
+<center> 
+
+<h1> This is Elliott's </h1>
+
+<h1>  CAT </h1>
+
+<h1> html file </h1>
+
+</center> 
+</body> </html>
+
+
+*** Processed for this Request ***
+GET /cat.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+
+
+
+
+
+*** << 2. I opened sub-a directory, then opened dog.txt, and then cat.html all in sub-a directory.
+
+
+
+*This is a directory. Loading directory page: sub-a*
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 245
+Content-Type: text/html
+Response for Request: /sub-a
+Output: <html><body><pre><h1>Index of /sub-a</h1><br><a href="/">Parent Directory</a> <br><br>[TXT] <a href="/sub-a/dog.txt">dog.txt</a> <br>[TXT] <a href="/sub-a/cat.html">cat.html</a> <br>[DIR] <a href="/sub-a/sub-b">sub-b</a> <br></pre></body></html>
+
+*** Processed for this Request ***
+GET /sub-a HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/txt
+Response for Request: /sub-a/dog.txt
+Output: This is Elliott's dog file on condor. Good job!
+
+
+*** Processed for this Request ***
+GET /sub-a/dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 121
+Content-Type: text/html
+Response for Request: /sub-a/cat.html
+Output: <html> <body>
+<center> 
+
+<h1> This is Elliott's </h1>
+
+<h1>  CAT </h1>
+
+<h1> html file </h1>
+
+</center> 
+</body> </html>
+
+
+*** Processed for this Request ***
+GET /sub-a/cat.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request..
+
+
+
+
+
+
+*** << 3. Then, I opened sub-b directory and then opened dog.txt file, then cat.txt file. 
+
+*This is a directory. Loading directory page: sub-a/sub-b*
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 225
+Content-Type: text/html
+Response for Request: /sub-a/sub-b
+Output: <html><body><pre><h1>Index of /sub-a/sub-b</h1><br><a href="/sub-a">Parent Directory</a> <br><br>[TXT] <a href="/sub-a/sub-b/dog.txt">dog.txt</a> <br>[TXT] <a href="/sub-a/sub-b/cat.html">cat.html</a> <br></pre></body></html>
+
+*** Processed for this Request ***
+GET /sub-a/sub-b HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/txt
+Response for Request: /sub-a/sub-b/dog.txt
+Output: This is Elliott's dog file on condor. Good job!
+
+
+*** Processed for this Request ***
+GET /sub-a/sub-b/dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/sub-b
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 121
+Content-Type: text/html
+Response for Request: /sub-a/sub-b/cat.html
+Output: <html> <body>
+<center> 
+
+<h1> This is Elliott's </h1>
+
+<h1>  CAT </h1>
+
+<h1> html file </h1>
+
+</center> 
+</body> </html>
+
+
+*** Processed for this Request ***
+GET /sub-a/sub-b/cat.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/sub-b
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+
+
+
+
+*** << 4. After that, I clicked on parent link while in sub-b directory, and returned to sub-a directory. 
+
+
+*This is a directory. Loading directory page: sub-a*
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 245
+Content-Type: text/html
+Response for Request: /sub-a
+Output: <html><body><pre><h1>Index of /sub-a</h1><br><a href="/">Parent Directory</a> <br><br>[TXT] <a href="/sub-a/dog.txt">dog.txt</a> <br>[TXT] <a href="/sub-a/cat.html">cat.html</a> <br>[DIR] <a href="/sub-a/sub-b">sub-b</a> <br></pre></body></html>
+
+*** Processed for this Request ***
+GET /sub-a HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/sub-b
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+
+
+
+*** << 5  While in sub-a directory, I clicked on parent directory link and returned to root. 
+*This is a directory. Loading directory page: ./*
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 387
+Content-Type: text/html
+Response for Request: /
+Output: <html><body><pre><h1>Index of ./</h1><br>[TXT] <a href="/.DS_Store">.DS_Store</a> <br>[DIR] <a href="/out">out</a> <br>[DIR] <a href="/sub-a">sub-a</a> <br>[TXT] <a href="/dog.txt">dog.txt</a> <br>[TXT] <a href="/cat.html">cat.html</a> <br>[TXT] <a href="/MyWebServer.iml">MyWebServer.iml</a> <br>[DIR] <a href="/.idea">.idea</a> <br>[DIR] <a href="/src">src</a> <br></pre></body></html>
+
+*** Processed for this Request ***
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+
+
+
+
+*** << 6. I then tested add num form. 
+
+*** Outgoing Response Processed***
+HTTP/1.1 200 OK
+Content-Length: 76
+Content-Type: text/html
+Response for Request: /cgi/addnums.fake-cgi?person=Leo&num1=4&num2=5
+Output: <html><body><b><h4>Dear Leo, the sum of 4 and 5 is 9.</b></h4></html></body>
+
+*** Processed for this Request ***
+GET /cgi/addnums.fake-cgi?person=Leo&num1=4&num2=5 HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+Waiting for another request...
+
+
